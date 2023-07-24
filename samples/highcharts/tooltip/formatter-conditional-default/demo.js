@@ -24,8 +24,8 @@ Highcharts.chart('container', {
 
     tooltip: {
         formatter: function (tooltip) {
-            if (this.point.isNull) {
-                return 'Null';
+            if (this.point.value !== null) {
+                return 'A Custom Tooltip!';
             }
             // If not null, use the default formatter
             return tooltip.defaultFormatter.call(this, tooltip);
